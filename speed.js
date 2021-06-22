@@ -1,10 +1,10 @@
-/*
+/*************************************************************
 Write a function to check the speed of drivers. This function should have one parameter: speed.
 ○   If speed is less than 80, it should print “Ok”.
 ○	Otherwise, for every 4km/h above the speed limit (80), it should give the driver one demerit point and print the total number of demerit points. For example, if the speed is 90, it should print: “Points: 2”.
 ○	If the driver gets more than 12 points, the function should print: “License suspended”
 
-*/
+***********************************************************************/
 
 /* Check User Speed, get its value from user's input, and add it to the DOM*/
 
@@ -47,12 +47,17 @@ let checkSpeed = (speed) => {
   }
 
   else if (speed > 80) {
-    speed = speed - 80;
-    const multiplier = Math.floor(speed / 4);
 
+    /* Estimate the speed value above 80 km/h */
+    speed = speed - 80;
+
+    /* Calculate how many points the driver has lost(or demerit points he gained)*/
+    const multiplier = Math.floor(speed / 4);
     console.log("Points : " + multiplier);
     let speedSpan = document.getElementById("speedWord");
     let speedPoints = document.getElementById("speedPoints");
+
+    /* Calculate how many driving licence points left */
     leftPoints = 12 - multiplier;
 
    /* Send back to the DOM licence points lost, licence points left, and a warn message */

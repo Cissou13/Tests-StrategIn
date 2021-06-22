@@ -22,13 +22,10 @@ const getMaximum = (x, y) => x > y ? x : y;
 
 // Il est également possible de procéder de façon plus classique
 
-/*
 
-function getMaximum(x, y) {
-  if (x > y) {
-    return x;
-  } 
-  return y;
-}
-
-*/
+// function getMaximum(x, y) {
+//   if (x > y) {
+//     return x;
+//   } 
+//   return y;
+// }

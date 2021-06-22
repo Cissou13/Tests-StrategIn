@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>StrategIn Tests</title>
     
   </head>
@@ -24,6 +25,7 @@
       <p>Type your number <input type="text" id="modulo" /></p>
     </div>
     <button onclick="displayModulo()">Check if the number is divisible by 3, 5 or both </button>
+    <br />
     <div><span id="moduloWord">Your number is divisible by </span>  | <span id="moduloResult"></span> </span</div>
   </section>
   <section>
@@ -37,12 +39,11 @@
   <section>
     <h2>Exercice 4 : Check if a number is odd or even</h2>
     <div>
-      <p>Enter your number <input type="text" id="speed" /></p>
+      <p>Check all numbers until <input type="text" id="oddeven" /></p>
     </div>
-    <button onclick="displayNumber()">Number is Odd</button>
-
-    <div><span id="speedWord"></span> <span id="speedPoints"></span></div>
-
+    <button onclick="displayNumbers()">Show me the list in the console</button>
+    <button onclick="clearDisplay()">Clear the table</button>
+    <p class="oddevenWord"></p>
   </section>
   </body>
 
