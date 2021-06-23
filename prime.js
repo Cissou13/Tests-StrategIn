@@ -3,6 +3,8 @@
 where limit is a parameter.
 */
 
+/* Call and show the list of all prime numbers */
+
 const displayPrime = () => {
   const inputPrime = Number(document.getElementById('prime').value);
   showPrimes(inputPrime);
@@ -10,13 +12,16 @@ const displayPrime = () => {
   primeResult.innerHTML = inputPrime;
 };
 
-const clearPrime = () => {
+/* Clear all table content */
+
+const clearPrimes = () => {
   const primeAll = document.querySelectorAll('.primeWord');
   for (let i = 0; i < primeAll.length; i++) {
     primeAll[i].textContent = '';
   }
 };
 
+/* Check a list of maximum number, and split them into odd/even, then print them each in a new p */
 let showPrimes = (x) => {
   for (let i = 0; i <= x; i++) {
     let rest = 0;

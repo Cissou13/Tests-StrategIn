@@ -1,6 +1,60 @@
+h1,
+body {
+  margin: 0;
+}
+
 section {
   border-bottom: 3px ridge black;
-  width: auto;
-  max-width: 50%;
+  margin: 0 3px;
   padding-bottom: 1%;
+}
+
+h1 {
+  background-color: #063aa9;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: brown;
+  text-align: center;
+  text-decoration: underline;
+}
+
+input {
+  padding: 0 2px;
+  box-shadow: 2px 2px 1px black;
+  margin-left: 15px;
+}
+
+#github-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+#github-btn {
+  padding: 5px;
+  background-color: unset;
+}
+
+#github-btn a {
+  text-decoration: none;
+  color: red;
+}
+
+.btn {
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: rgb(174, 144, 194);
+  color: rgb(255, 255, 255);
+}
+
+.btn-clear {
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(196, 187, 187);
+  color: navy;
 }
