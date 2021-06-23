@@ -9,63 +9,54 @@ Write a function to check the speed of drivers. This function should have one pa
 /* Check User Speed, get its value from user's input, and add it to the DOM*/
 
 let displaySpeed = () => {
-  const inputSpeed = Number((document.getElementById('speed').value));
+  const inputSpeed = Number(document.getElementById('speed').value);
   const speed = checkSpeed(inputSpeed);
-  
-  let speedSpan = document.getElementById("speedResult");
+
+  let speedSpan = document.getElementById('speedResult');
   speedSpan.innerHTML = speed;
-}
+};
 
 /* Check if the driver is committing a road traffic offense, and warn him the correct way */
 
 let checkSpeed = (speed) => {
-
   /* Starting Driving licence points */
   let leftPoints = 12;
 
   /* Error control if speed is negative or 0 */
 
   if (speed < 1) {
-    alert("Invalid value")
-    let speedSpan = document.getElementById("speedWord");
+    alert('Invalid value');
+    let speedSpan = document.getElementById('speedWord');
     speedSpan.innerHTML = "You can't drive that slow";
     return speed;
-  } 
-
-  else if (speed <= 80) {
-    console.log("Ok");
-    let speedSpan = document.getElementById("speedWord");
-    speedSpan.innerHTML = "Speed is Ok";
-  }  
-
-  /* Check if the user has lost every licence points, and tell him that his Licence is suspended ! We have to avoid dangerous drivers ! */
-
-  else if (speed >= 128) {
-    console.log("Licence Suspended");
-    let speedSpan = document.getElementById("speedWord");
-    speedSpan.innerHTML = "No more points left ! Licence Suspended";
-  }
-
-  else if (speed > 80) {
-
+  } else if (speed <= 80) {
+    console.log('Ok');
+    let speedSpan = document.getElementById('speedWord');
+    speedSpan.innerHTML = 'Speed is Ok';
+  } else if (speed >= 128) {
+    /* Check if the user has lost every licence points, and tell him that his Licence is suspended ! We have to avoid dangerous drivers ! */
+    console.log('Licence Suspended');
+    let speedSpan = document.getElementById('speedWord');
+    speedSpan.innerHTML = 'No more points left ! Licence Suspended';
+  } else if (speed > 80) {
     /* Estimate the speed value above 80 km/h */
     speed = speed - 80;
 
     /* Calculate how many points the driver has lost(or demerit points he gained)*/
     const multiplier = Math.floor(speed / 4);
-    console.log("Points : " + multiplier);
-    let speedSpan = document.getElementById("speedWord");
-    let speedPoints = document.getElementById("speedPoints");
+    console.log('Points : ' + multiplier);
+    let speedSpan = document.getElementById('speedWord');
+    let speedPoints = document.getElementById('speedPoints');
 
     /* Calculate how many driving licence points left */
     leftPoints = 12 - multiplier;
 
-   /* Send back to the DOM licence points lost, licence points left, and a warn message */
+    /* Send back to the DOM licence points lost, licence points left, and a warn message */
 
-  
-    speedSpan.innerHTML = "You lost : " + ' ' + multiplier + " license point(s)";
-    speedPoints.innerHTML = " | Points left : " + parseInt(leftPoints);
+    speedSpan.innerHTML =
+      'You lost : ' + ' ' + multiplier + ' license point(s)';
+    speedPoints.innerHTML = ' | Points left : ' + parseInt(leftPoints);
   }
 
   return speed;
-}
+};
