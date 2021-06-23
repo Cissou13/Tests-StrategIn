@@ -25,7 +25,6 @@
       <p>Type your number <input type="text" id="modulo" /></p>
     </div>
     <button onclick="displayModulo()">Check if the number is divisible by 3, 5 or both </button>
-    <br />
     <div><span id="moduloWord">Your number is divisible by </span>  | <span id="moduloResult"></span> </span</div>
   </section>
   <section>
@@ -41,11 +40,38 @@
     <div>
       <p>Check all numbers until <input type="text" id="oddeven" /></p>
     </div>
-    <button onclick="displayNumbers()">Show me the list in the console</button>
+    <button onclick="displayNumbers()">Show me the list</button>
     <button onclick="clearDisplay()">Clear the table</button>
     <p class="oddevenWord"></p>
   </section>
   </body>
+  <section>
+    <h2>Exercice 5 : Print the sum of  3 & 5 multipliers until a limit</h2>
+    <div>
+      <p>Enter the  <input type="text" id="speed" /></p>
+    </div>
+    <button onclick="displaySpeed()">Sum it all !</button>
+    <div><span id="speedWord"></span> <span id="speedPoints"></span></div>
+  </section>
+  <section>
+    <h2>Exercice 6 : Print stars a given number of times</h2>
+    <div>
+      <p>Enter the number of occurences <input type="text" id="stars" /></p>
+    </div>
+    <button onclick="displayStars()">Let it shining !</button>
+    <button onclick="clearStars()">Clear the table</button>
+    <p class="starsWord"></p>
+  </section>
+  <section>
+    <h2>Exercice 7 : Print all prime number until a given value</h2>
+    <div>
+      <p>Enter the maximum prime number <input type="text" id="prime" /></p>
+    </div>
+    <button onclick="displayPrime()">Show me the Primes ! (Not Amazon)</button>
+    <button onclick="clearPrime()">Clear all numbers</button>
+    <p class="primeWord"></p>
+  </section>
+
 
 <!-- Loading exercices scripts -->
 
@@ -53,4 +79,7 @@
   <script src="modulo.js"></script>
   <script src="speed.js"></script>
   <script src="oddeven.js"></script>
+  <script src="sumofmultiples.js"></script>
+  <script src="stars.js"></script>
+  <script src="prime.js"></script>
 </html>
